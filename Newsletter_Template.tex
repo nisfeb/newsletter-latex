@@ -26,15 +26,15 @@
 \usepackage[T1]{fontenc}		% font encoding
 \usepackage{charter} 			% Charter font for main content
 \usepackage{datetime}			% custom date
-\usepackage{fancyhdr}
-\usepackage[dvipsnames]{xcolor}
-\usepackage[pdfpagemode=FullScreen,
-			colorlinks=false]{hyperref}	% links and pdf behaviour
+\usepackage{fancyhdr}			% header and footer control
+\usepackage[dvipsnames]{xcolor}	% complex colors
+\usepackage{adforn}				% decorative hyphens
+\usepackage[pdfpagemode=FullScreen,colorlinks=false]{hyperref}	% links and pdf behaviour
 \input GoudyIn.fd
 \pagestyle{fancy}
 \lfoot{\footnotesize 
 	TLM Place \\
-	\href{https://place.com}{Digital copy available at place.com}	\quad
+	\href{https://place.com}{Digital copy available at place.com}\quad
 	\Letter\ \href{mailto:newsletter@place.com}{Suggest content at newsletter@place.com}
 }
 \cfoot{}
@@ -79,9 +79,14 @@
 
 \begin{center}
 \begin{minipage}[h]{0.75\linewidth}
-	\IlluminateFirstChar{W}{elcome}{ to St. Saint's Historic Church}
-	\emph{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sodales tellus ante, vel ullamcorper nisi porttitor ac. Mauris luctus vehicula enim eu scelerisque. Etiam rutrum sem vitae risus bibendum, a hendrerit elit interdum. Proin vulputate fringilla quam, nec ultricies purus tincidunt id. Pellentesque vitae posuere purus, et laoreet elit. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus nulla enim, sagittis sit amet lorem a, accumsan congue turpis. Proin vulputate maximus maximus.}
+\IlluminateFirstChar{W}{elcome}{ to St. Saint's Historic Church}
+\emph{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sodales tellus ante, vel ullamcorper nisi porttitor ac. Mauris luctus vehicula enim eu scelerisque. Etiam rutrum sem vitae risus bibendum, a hendrerit elit interdum. Proin vulputate fringilla quam, nec ultricies purus tincidunt id. Pellentesque vitae posuere purus, et laoreet elit. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus nulla enim, sagittis sit amet lorem a, accumsan congue turpis. Proin vulputate maximus maximus.}
 \end{minipage}
+
+\vspace{1cm}
+Mass Times\\
+07:30 AM \adforn{46} Fr. Priest\\
+12:00 PM \adforn{46} Fr. Priest
 \end{center}
 
 \vspace{0.5cm}
