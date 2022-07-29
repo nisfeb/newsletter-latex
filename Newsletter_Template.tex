@@ -1,0 +1,100 @@
+%\title{Newsletter Template}
+\documentclass[10pt,a4paper]{article}
+
+% Define geometry (without using the geometry package)
+\setlength\topmargin{-70pt}
+\setlength\headheight{12pt}
+\setlength\headsep{15pt}
+\setlength\marginparwidth{-20pt}
+\setlength\textwidth{7.0in}
+\setlength\textheight{9.5in}
+\setlength\oddsidemargin{-30pt}
+\setlength\evensidemargin{-30pt}
+
+\frenchspacing	% better looking spacing
+
+% Call packages we'll need
+\usepackage[english]{babel}		% english
+\usepackage{fourier-orns}		% decorative rule
+\usepackage{lettrine}   		% drop caps
+\usepackage{graphicx}			% images
+\usepackage{amssymb,amsmath}	% math
+\usepackage{multicol}			% three-column layout
+\usepackage{url}				% clickable links
+\usepackage{marvosym}			% symbols
+\usepackage{wrapfig}			% wrapping text around figures
+\usepackage[T1]{fontenc}		% font encoding
+\usepackage{charter} 			% Charter font for main content
+\usepackage{datetime}			% custom date
+\usepackage{fancyhdr}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[pdfpagemode=FullScreen,
+			colorlinks=false]{hyperref}	% links and pdf behaviour
+\input GoudyIn.fd
+\pagestyle{fancy}
+\lfoot{\footnotesize 
+	TLM Place \\
+	\href{https://place.com}{Digital copy available at place.com}	\quad
+	\Letter\ \href{mailto:newsletter@place.com}{Suggest content at newsletter@place.com}
+}
+\cfoot{}
+\rfoot{\footnotesize ~\\ Page \thepage}
+\renewcommand{\headrulewidth}{0.0pt}	% no bar on top of page
+\renewcommand{\footrulewidth}{0.4pt}	% bar on bottom of page
+
+% Define commands
+\newcommand{\JournalIssue}[1]{\hfill \textsc{Eighteenth Sunday of Ordinary Time, No #1}}
+\newcommand{\NewsItem}[1]{\Large #1}
+\newcommand{\NewsAuthor}[1]{\small by {#1}}
+\newcommand*{\rom}[1]{\expandafter\romannumeral #1}
+\newcommand{\SepRule}{\noindent
+\begin{center}
+	\hrulefill\hspace{0.2cm} \floweroneleft\floweroneright \hspace{0.2cm} \hrulefill
+\end{center}
+}
+\newcommand{\JournalName}[2]{
+\begin{center}	
+	\Huge#1\linebreak\small#2
+\end{center}
+}
+\newcommand{\IlluminateFirstChar}[3]{
+	\large\lettrine[lines=5, lraise=-0.07, nindent=0.0em, slope=-0em]{\fontsize{85}{60}\usefont{U}{GoudyIn}{xl}{n}\color{BrickRed}#1}{#2}#3\vspace{0.1cm}\\
+}
+\newcommand{\ItemWrapper}[2]{
+	\begin{center}
+	\NewsItem{#1}
+	\vspace{0.15cm}
+	\noindent\hrule width \linewidth height 0.01cm
+	\vspace{0.15cm}
+	\NewsAuthor{#2}
+	\vspace{0.1cm}
+	\noindent\hrule width \linewidth height 0.01cm
+	\end{center}
+}
+
+\begin{document}
+\JournalIssue{1}
+\JournalName{Traditional Latin Mass}{Place}
+\vspace{0.5cm}
+
+\begin{center}
+\begin{minipage}[h]{0.75\linewidth}
+	\IlluminateFirstChar{W}{elcome}{ to St. Saint's Historic Church}
+	\emph{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sodales tellus ante, vel ullamcorper nisi porttitor ac. Mauris luctus vehicula enim eu scelerisque. Etiam rutrum sem vitae risus bibendum, a hendrerit elit interdum. Proin vulputate fringilla quam, nec ultricies purus tincidunt id. Pellentesque vitae posuere purus, et laoreet elit. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus nulla enim, sagittis sit amet lorem a, accumsan congue turpis. Proin vulputate maximus maximus.}
+\end{minipage}
+\end{center}
+
+\vspace{0.5cm}
+\SepRule
+\vspace{0.5cm}
+
+\begin{multicols}{3}
+\ItemWrapper{Monkey eats elephant}{F. Wenneker}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sodales tellus ante, vel ullamcorper nisi porttitor ac. Mauris luctus vehicula enim eu scelerisque. Etiam rutrum sem vitae risus bibendum, a hendrerit elit interdum. Proin vulputate fringilla quam, nec ultricies purus tincidunt id. Pellentesque vitae posuere purus, et laoreet elit. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus nulla enim, sagittis sit amet lorem a, accumsan congue turpis. Proin vulputate maximus maximus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sodales tellus ante, vel ullamcorper nisi porttitor ac. Mauris luctus vehicula enim eu scelerisque. Etiam rutrum sem vitae risus bibendum, a hendrerit elit interdum. Proin vulputate fringilla quam, nec ultricies purus tincidunt id. Pellentesque vitae posuere purus, et laoreet elit. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus nulla enim, sagittis sit amet lorem a, accumsan congue turpis. Proin vulputate maximus maximus
+
+\ItemWrapper{Elephant eats frog}{J. Doe}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sodales tellus ante, vel ullamcorper nisi porttitor ac. Mauris luctus vehicula enim eu scelerisque. Etiam rutrum sem vitae risus bibendum, a hendrerit elit interdum. Proin vulputate fringilla quam, nec ultricies purus tincidunt id. Pellentesque vitae posuere purus, et laoreet elit. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus nulla enim, sagittis sit amet lorem a, accumsan congue turpis. Proin vulputate maximus maximus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sodales tellus ante, vel ullamcorper nisi porttitor ac. Mauris luctus vehicula enim eu scelerisque. Etiam rutrum sem vitae risus bibendum, a hendrerit elit interdum. Proin vulputate fringilla quam, nec ultricies purus tincidunt id. Pellentesque vitae posuere purus, et laoreet elit. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus nulla enim, sagittis sit amet lorem a, accumsan congue turpis. Proin vulputate maximus maximus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sodales tellus ante, vel ullamcorper nisi porttitor ac. Mauris luctus vehicula enim eu scelerisque. Etiam rutrum sem vitae risus bibendum, a hendrerit elit interdum. Proin vulputate fringilla quam, nec ultricies purus tincidunt id. Pellentesque vitae posuere purus, et laoreet elit. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus nulla enim, sagittis sit amet lorem a, accumsan congue turpis. Proin vulputate maximus maximus
+\end{multicols}
+\end{document} 
